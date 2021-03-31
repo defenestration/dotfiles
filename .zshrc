@@ -8,6 +8,10 @@ export ZSH="${HOME}/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="fino-time"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="agnoster" # (this is one of the fancy ones)
+
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -69,7 +73,7 @@ ZSH_THEME="fino-time"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kube-ps1 kubectl)
+plugins=(git kube-ps1 kubectl docker osx)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,5 +123,9 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
-doge 
+
+if [[ -o login ]] ; then
+#  doge 
+fi
 alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
+alias wk='watch kubectl'
