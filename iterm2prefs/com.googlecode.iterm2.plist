@@ -1724,7 +1724,11 @@
 	<true/>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>SeparateWindowTitlePerTab</key>
+	<true/>
 	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
@@ -1734,6 +1738,10 @@
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>4</integer>
+	<key>TerminalMargin</key>
+	<integer>5</integer>
+	<key>TerminalVMargin</key>
+	<integer>5</integer>
 	<key>TimeBetweenTips</key>
 	<real>604800</real>
 	<key>TripleClickSelectsFullWrappedLines</key>
