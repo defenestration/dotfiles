@@ -116,7 +116,7 @@ source /usr/local/etc/bash_completion.d/az
 
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-alias yq="yq eval -C"
+alias y="yq eval -C"
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
