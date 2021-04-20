@@ -66,7 +66,7 @@ ZSH_THEME="fino-time"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -128,4 +128,6 @@ if [[ -o login ]] ; then
 #  doge 
 fi
 alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
-alias wk='watch kubectl'
+alias wk='watch -n 10 kubectl'
+export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+#eval "$(starship init zsh)"
