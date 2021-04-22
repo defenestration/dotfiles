@@ -131,3 +131,4 @@ alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
 alias wk='watch -n 10 kubectl'
 export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 #eval "$(starship init zsh)"
+
