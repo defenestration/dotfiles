@@ -1,8 +1,4 @@
 asdfasdfasdf
 ajskldfhkjahsdjkfhakjhsdfhjl
-<<<<<<< HEAD
 
-change on local
-=======
-change on github
->>>>>>> 546f71912242efd7e08ab2a3865b256c6bc8fa33
+aslkdjflkajslkdfj
