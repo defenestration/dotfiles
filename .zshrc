@@ -117,6 +117,7 @@ source /usr/local/etc/bash_completion.d/az
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 alias y="yq eval -C"
+alias yess=" y | less"
 if type brew &>/dev/null; then
     FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
@@ -131,4 +132,6 @@ alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
 alias wk='watch -n 10 kubectl'
 export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 #eval "$(starship init zsh)"
+
+. <(flux completion zsh)
 
