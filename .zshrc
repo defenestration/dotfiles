@@ -134,4 +134,4 @@ export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ru
 #eval "$(starship init zsh)"
 
 . <(flux completion zsh)
-
+alias pip=pip3
