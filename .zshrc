@@ -135,3 +135,5 @@ export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ru
 
 . <(flux completion zsh)
 alias pip=pip3
+
+source ~/git/dotfiles/.bash_it/custom/al.bash
