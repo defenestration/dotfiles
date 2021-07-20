@@ -137,3 +137,10 @@ export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ru
 alias pip=pip3
 
 source ~/git/dotfiles/.bash_it/custom/al.bash
+
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
