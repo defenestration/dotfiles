@@ -15,6 +15,8 @@ install ohmyzsh,doge, other brew stuff?
 # untested
 ln -s -f ${HOME)/.zshrc `pwd`/.zshrc
 ln -s -f ${HOME}/.oh-my-zshrc/custom `pwd`/.oh-my-zshrc/custom
+ln -s -f ${HOME}/.gitignore `pwd`/gitignore-global
+git config --global core.excludesfile ~/.gitignore
 ```
 
 # iterm2
