@@ -9,13 +9,12 @@ https://github.com/thiderman/doge
 
 ## install
 
-install ohmyzsh,doge, other brew stuff?
+install ohmyzsh, doge, other brew stuff?
 
 ```sh
 # untested
-ln -s -f ${HOME)/.zshrc `pwd`/.zshrc
-ln -s -f ${HOME}/.oh-my-zshrc/custom `pwd`/.oh-my-zshrc/custom
-ln -s -f ${HOME}/.gitignore `pwd`/gitignore-global
+ln -s -f `pwd`/.zshrc ${HOME)/.zshrc 
+ln -s -f `pwd`/gitignore-global ${HOME}/.gitignore 
 git config --global core.excludesfile ~/.gitignore
 ```
 
