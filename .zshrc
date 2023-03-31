@@ -112,7 +112,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="$PATH:/usr/local/sbin:/$HOME/bin"
 
 autoload -U +X bashcompinit && bashcompinit
-source /usr/local/etc/bash_completion.d/az
+[[ -f  /usr/local/etc/bash_completion.d/az ]] && source /usr/local/etc/bash_completion.d/az
 
 complete -o nospace -C /usr/local/bin/terraform terraform
 
@@ -144,5 +144,5 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/a.brevick/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-source ~/.kubech/kubech
+[[ -f ~/.kubech/kubech ]] && source ~/.kubech/kubech
 autoload -U compinit && compinit
