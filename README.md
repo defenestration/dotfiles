@@ -5,7 +5,6 @@ dotfiles
 Looks for ohmyzsh and other goodies.
 * ohmyzsh
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k#getting-started)
-* also you will want [doge](https://github.com/thiderman/doge)
 
 ## install OSX
 
@@ -30,6 +29,8 @@ Save Changes: Save changes automaticaly
 
 In an Ubuntu 20 using WSL2  you will also want stuff to forward ssh key with keepassxc. see [here](https://code.mendhak.com/wsl2-keepassxc-ssh/)
 
+generally too, teh dotfiles folder should be at ~/git/dotfiles
+
 ``` 
 echo "ohmyzsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -37,7 +38,7 @@ echo "powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 echo ".zshrc"
-ln -s -f `pwd`/.zshrc.wsl2 ${HOME}/.zshrc 
+ln -s -f `pwd`/.zshrc ${HOME}/.zshrc 
 ln -s -f `pwd`/gitignore-global ${HOME}/.gitignore 
 git config --global core.excludesfile ~/.gitignore
 

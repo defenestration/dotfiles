@@ -146,3 +146,14 @@ export PATH="/Users/a.brevick/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 [[ -f ~/.kubech/kubech ]] && source ~/.kubech/kubech
 autoload -U compinit && compinit
+
+
+if uname -r | grep -q WSL2 ; then
+  export WSL=true
+  export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
+  ss -a | grep -q $SSH_AUTH_SOCK
+  if [ $? -ne 0 ]; then
+    rm -f $SSH_AUTH_SOCK
+    (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$HOME/bin/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
+  fi
+fi
