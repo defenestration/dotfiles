@@ -77,7 +77,7 @@ ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kube-ps1 kubectl docker macos)
+plugins=(git kubectl docker macos)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,10 +109,6 @@ source $ZSH/oh-my-zsh.sh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#bindkey -e
-#bindkey '^[[1;9C' forward-word 
-#bindkey '^[[1;9D' backward-word
-#source <(kubectl completion zsh)
 export PATH="$PATH:/usr/local/sbin:/$HOME/bin"
 
 autoload -U +X bashcompinit && bashcompinit
@@ -123,19 +119,13 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 alias y="yq eval -C"
 alias yess=" y | less"
 
-#if type brew &>/dev/null; then
-#    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-#    autoload -Uz compinit
-#    compinit
-#fi
-
 alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
 alias wk='watch -n 10 kubectl'
 
 export PATH="$HOME/.gem/ruby/3.0.0/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
-#eval "$(starship init zsh)"
 
 . <(flux completion zsh)
+
 alias pip=pip3
 
 source ~/git/dotfiles/.bash_it/custom/al.bash
@@ -145,8 +135,14 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 #command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
-export PATH="${PATH}:${HOME}/.krew/bin"
+export PATH="${PATH}:${HOME}/.krew/bin:${HOME}/go/bin"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/a.brevick/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+source ~/.kubech/kubech
+autoload -U compinit && compinit

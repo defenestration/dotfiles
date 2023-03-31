@@ -134,6 +134,8 @@
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>NeverWarnAboutShortLivedSessions_63DA42D8-DAB4-40BF-8044-0911BF984889</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_63DA42D8-DAB4-40BF-8044-0911BF984889_selection</key>
@@ -1695,6 +1697,8 @@
 	</array>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1750,6 +1754,544 @@
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>guid</key>
+			<string>6D059A7B-73EC-416B-9E43-07BB76C580CD</string>
+			<key>title</key>
+			<string>Last login: Fri Jul  8 14:56:47 on ttys002
+  ~/git/k8s-apps-test   main +551                                                                                                             15:24:11
+❯ cd ../k8s-config
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:24:16
+❯ git log
+  ~/git/k8s-config   main ⇣1 *1                                                                                                 ✘ PIPE  22s  15:24:41
+❯ man docker-build
+No manual entry for docker-build
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:41
+❯ man docker
+No manual entry for docker
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:45
+❯ docker -h
+Flag shorthand -h has been deprecated, please use --help
+docker
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/a.brevick/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker
+                           context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/a.brevick/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/a.brevick/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/a.brevick/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.8.2)
+  compose*    Docker Compose (Docker Inc., v2.6.0)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.17.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:50
+❯ docker build -h
+Flag shorthand -h has been deprecated, please use --help
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+
+Options:
+      --add-host list           Add a custom host-to-IP mapping (host:ip)
+      --build-arg list          Set build-time variables
+      --cache-from strings      Images to consider as cache sources
+      --disable-content-trust   Skip image verification (default true)
+  -f, --file string             Name of the Dockerfile (Default is 'PATH/Dockerfile')
+      --iidfile string          Write the image ID to the file
+      --isolation string        Container isolation technology
+      --label list              Set metadata for an image
+      --network string          Set the networking mode for the RUN instructions during build (default "default")
+      --no-cache                Do not use cache when building the image
+  -o, --output stringArray      Output destination (format: type=local,dest=path)
+      --platform string         Set platform if server is multi-platform capable
+      --progress string         Set type of progress output (auto, plain, tty). Use plain to show container output (default "auto")
+      --pull                    Always attempt to pull a newer version of the image
+  -q, --quiet                   Suppress the build output and print image ID on success
+      --secret stringArray      Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret
+      --ssh stringArray         SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|&lt;id&gt;[=&lt;socket&gt;|&lt;key&gt;[,&lt;key&gt;]])
+  -t, --tag list                Name and optionally a tag in the 'name:tag' format
+      --target string           Set the target build stage to build.
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:53
+❯ dotnet -h
+Usage: dotnet [runtime-options] [path-to-application] [arguments]
+
+Execute a .NET application.
+
+runtime-options:
+  --additionalprobingpath &lt;path&gt;   Path containing probing policy and assemblies to probe for.
+  --additional-deps &lt;path&gt;         Path to additional deps.json file.
+  --depsfile                       Path to &lt;application&gt;.deps.json file.
+  --fx-version &lt;version&gt;           Version of the installed Shared Framework to use to run the application.
+  --roll-forward &lt;setting&gt;         Roll forward to framework version  (LatestPatch, Minor, LatestMinor, Major, LatestMajor, Disable).
+  --runtimeconfig                  Path to &lt;application&gt;.runtimeconfig.json file.
+
+path-to-application:
+  The path to an application .dll file to execute.
+
+Usage: dotnet [sdk-options] [command] [command-options] [arguments]
+
+Execute a .NET SDK command.
+
+sdk-options:
+  -d|--diagnostics  Enable diagnostic output.
+  -h|--help         Show command line help.
+  --info            Display .NET information.
+  --list-runtimes   Display the installed runtimes.
+  --list-sdks       Display the installed SDKs.
+  --version         Display .NET SDK version in use.
+
+SDK commands:
+  add               Add a package or reference to a .NET project.
+  build             Build a .NET project.
+  build-server      Interact with servers started by a build.
+  clean             Clean build outputs of a .NET project.
+  format            Apply style preferences to a project or solution.
+  help              Show command line help.
+  list              List project references of a .NET project.
+  msbuild           Run Microsoft Build Engine (MSBuild) commands.
+  new               Create a new .NET project or file.
+  nuget             Provides additional NuGet commands.
+  pack              Create a NuGet package.
+  publish           Publish a .NET project for deployment.
+  remove            Remove a package or reference from a .NET project.
+  restore           Restore dependencies specified in a .NET project.
+  run               Build and run a .NET project output.
+  sdk               Manage .NET SDK installation.
+  sln               Modify Visual Studio solution files.
+  store             Store the specified assemblies in the runtime package store.
+  test              Run unit tests using the test runner specified in a .NET project.
+  tool              Install or manage tools that extend the .NET experience.
+  vstest            Run Microsoft Test Engine (VSTest) commands.
+  workload          Manage optional workloads.
+
+Additional commands from bundled tools:
+  dev-certs         Create and manage development certificates.
+  fsi               Start F# Interactive / execute F# scripts.
+  sql-cache         SQL Server cache command-line tools.
+  user-secrets      Manage development user secrets.
+  watch             Start a file watcher that runs a command when files change.
+
+Run 'dotnet [command] --help' for more information on a command.
+  ~/git/k8s-config   main ⇣1 *1                                                                                                          4s  16:03:18
+❯ dotnet publish -h
+Description:
+  Publisher for the .NET Platform
+
+Usage:
+  dotnet publish [&lt;PROJECT | SOLUTION&gt;...] [options]
+
+Arguments:
+  &lt;PROJECT | SOLUTION&gt;  The project or solution file to operate on. If a file is not specified, the command will search the current directory for one.
+
+Options:
+  --use-current-runtime                Use current runtime as the target runtime.
+  -o, --output &lt;OUTPUT_DIR&gt;            The output directory to place the published artifacts in.
+  --manifest &lt;MANIFEST&gt;                The path to a target manifest file that contains the list of packages to be excluded from the publish step.
+  --no-build                           Do not build the project before publishing. Implies --no-restore.
+  --sc, --self-contained               Publish the .NET runtime with your application so the runtime doesn't need to be installed on the target machine.
+                                       The default is 'true' if a runtime identifier is specified.
+  --no-self-contained                  Publish your application as a framework dependent application. A compatible .NET runtime must be installed on the
+                                       target machine to run your application.
+  --nologo                             Do not display the startup banner or the copyright message.
+  -f, --framework &lt;FRAMEWORK&gt;          The target framework to publish for. The target framework has to be specified in the project file.
+  -r, --runtime &lt;RUNTIME_IDENTIFIER&gt;   The target runtime to publish for. This is used when creating a self-contained deployment.
+                                       The default is to publish a framework-dependent application.
+  -c, --configuration &lt;CONFIGURATION&gt;  The configuration to publish for. The default for most projects is 'Debug'.
+  --version-suffix &lt;VERSION_SUFFIX&gt;    Set the value of the $(VersionSuffix) property to use when building the project.
+  --interactive                        Allows the command to stop and wait for user input or action (for example to complete authentication).
+  --no-restore                         Do not restore the project before building.
+  -v, --verbosity &lt;LEVEL&gt;              Set the MSBuild verbosity level. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].
+  -a, --arch &lt;arch&gt;                    The target architecture.
+  --os &lt;os&gt;                            The target operating system.
+  -?, -h, --help                       Show command line help.
+
+
+
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               16:03:26
+❯ ls
+Dockerfile                                docs                                      post-infrastructure
+README.md                                 image automation helper.md                scripts
+SOPS.md                                   image-automation-helper-kustomizations.sh setup a new kubernetes service.md
+apps                                      infrastructure                            tf
+catalog-info.yaml                         local-kind.md
+clusters                                  mkdocs.yml
+  ~/git/k8s-config   main ⇣1 *1                                                                                                               10:01:30
+❯ code .
+  ~/git/k8s-config   main ⇣1 *1                                                                         ⎈ tsckube-live-eastus-06/profile-api  10:01:34
+❯ k get secret -n flux-system flux-system
+Error from server (NotFound): namespaces "flux-system" not found
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                      ⎈ tsckube-live-eastus-06/profile-api  10:07:29
+❯ kcuc tsckube-dev-eastus-fluxv2
+Switched to context "tsckube-dev-eastus-fluxv2".
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                  ⎈ tsckube-dev-eastus-fluxv2/api-template  10:07:38
+❯ k get secret -n flux-system flux-system
+NAME          TYPE     DATA   AGE
+flux-system   Opaque   3      5d21h
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                  ⎈ tsckube-dev-eastus-fluxv2/api-template  10:11:57
+❯ k get secret -n flux-system flux-system -o yaml
+apiVersion: v1
+data:
+  identity: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUtJdjE0TW03elZ1UVEzU2QvOTNqM3BZZXdIZjhHaTA2VHpkbXF6S3NobFdvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFQ3ZTSHdsN2tZZ1lDMSsxVU5JYnFDd05BU0kwWERZK1MzVWhrQ3IrWE5OUkFvTXl5T01GawpxVm9qQ0oyZmtLSUY4clJNalFjNXNnblRReDBTdCtTM0lnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=
+  identity.pub: LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFQ3ZTSHdsN2tZZ1lDMSsxVU5JYnFDd05BU0kwWApEWStTM1Voa0NyK1hOTlJBb015eU9NRmtxVm9qQ0oyZmtLSUY4clJNalFjNXNnblRReDBTdCtTM0lnPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==
+  known_hosts: Z2l0aHViLmNvbSBlY2RzYS1zaGEyLW5pc3RwMjU2IEFBQUFFMlZqWkhOaExYTm9ZVEl0Ym1semRIQXlOVFlBQUFBSWJtbHpkSEF5TlRZQUFBQkJCRW1LU0VOalFFZXpPbXhrWk15N29wS2d3RkI5bmt0NVlScllNak51RzVOODd1UmdnNkNMcmJvNXdBZFQveTZ2MG1LVjBVMncwV1oyWUIvKytUcG9ja2c9
+kind: Secret
+metadata:
+  creationTimestamp: "2022-07-06T16:30:42Z"
+  name: flux-system
+  namespace: flux-system
+  resourceVersion: "7169"
+  uid: ccf88be0-eddd-4e11-b026-6287848a4985
+type: Opaque
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:12:01
+❯ file ~/tmp/pub-key
+/Users/a.brevick/tmp/pub-key: ASCII text
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:21:19
+❯ ls
+Dockerfile                                docs                                      post-infrastructure
+README.md                                 image automation helper.md                scripts
+SOPS.md                                   image-automation-helper-kustomizations.sh setup a new kubernetes service.md
+apps                                      infrastructure                            tf
+catalog-info.yaml                         local-kind.md
+clusters                                  mkdocs.yml
+  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:36:02
+❯ cd
+  ~                                                                                                                                             10:36:36
+❯ ssh-keygen -t ed25519 -C "your_email@example.comls"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/a.brevick/.ssh/id_ed25519): h^C
+  ~                                                                                                                                      ✘ INT  10:37:13
+❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/Users/a.brevick/.ssh/id_ed25519): ^C
+  ~                                                                                                                                      ✘ INT  10:37:41
+❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test
+Generating public/private ed25519 key pair.
+Enter passphrase (empty for no passphrase):
+
+  ~                                                                                                                                      ✘ INT  10:37:56
+❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -p""
+/Users/a.brevick/tmp/k8s-apps-test: No such file or directory
+  ~                                                                                                                                      ✘ 255  10:37:58
+❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -N
+ssh-keygen: option requires an argument -- N
+usage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]
+                  [-m format] [-N new_passphrase] [-O option]
+                  [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+                  [-w provider] [-Z cipher]
+       ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]
+                   [-P old_passphrase] [-Z cipher]
+       ssh-keygen -i [-f input_keyfile] [-m key_format]
+       ssh-keygen -e [-f input_keyfile] [-m key_format]
+       ssh-keygen -y [-f input_keyfile]
+       ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]
+       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+       ssh-keygen -B [-f input_keyfile]
+       ssh-keygen -D pkcs11
+       ssh-keygen -F hostname [-lv] [-f known_hosts_file]
+       ssh-keygen -H [-f known_hosts_file]
+       ssh-keygen -K [-a rounds] [-w provider]
+       ssh-keygen -R hostname [-f known_hosts_file]
+       ssh-keygen -r hostname [-g] [-f input_keyfile]
+       ssh-keygen -M generate [-O option] output_file
+       ssh-keygen -M screen [-f input_file] [-O option] output_file
+       ssh-keygen -I certificate_identity -s ca_key [-hU] [-D pkcs11_provider]
+                  [-n principals] [-O option] [-V validity_interval]
+                  [-z serial_number] file ...
+       ssh-keygen -L [-f input_keyfile]
+       ssh-keygen -A [-a rounds] [-f prefix_path]
+       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]
+                  file ...
+       ssh-keygen -Q [-l] -f krl_file [file ...]
+       ssh-keygen -Y find-principals -s signature_file -f allowed_signers_file
+       ssh-keygen -Y check-novalidate -n namespace -s signature_file
+       ssh-keygen -Y sign -f key_file -n namespace file ...
+       ssh-keygen -Y verify -f allowed_signers_file -I signer_identity
+                  -n namespace -s signature_file [-r revocation_file]
+  ~                                                                                                                                             10:38:06
+❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -N ''
+Generating public/private ed25519 key pair.
+Your identification has been saved in /Users/a.brevick/tmp/k8s-apps-test
+Your public key has been saved in /Users/a.brevick/tmp/k8s-apps-test.pub
+The key fingerprint is:
+SHA256:Tmd+g2jSdzlNsg2TaM554YZn8zJY6Rj+2ZgF9pyJ5aY fluxv2@tsckube-dev
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|                 |
+|                 |
+|           . .   |
+|        S = O.o  |
+|       + O.*o^ o |
+|      . =.O*/ @  |
+|       o .+B+&amp;   |
+|           .Eoo  |
++----[SHA256]-----+
+  ~                                                                                                                                             10:38:09
+❯ cat ~/tmp/k8s-apps-test.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIID8sa3A/mQMCtBUS8MxeMLw+Ig76sTQoOwhDa/BbsJe fluxv2@tsckube-dev
+  ~                                                                                                                                             10:38:40
+❯ cat ~/tmp/k8s-apps-test
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACCA/LGtwP5kDArQVEvDMXjC8PiIO+rE0KDsIQ2vwW7CXgAAAJi70r6au9K+
+mgAAAAtzc2gtZWQyNTUxOQAAACCA/LGtwP5kDArQVEvDMXjC8PiIO+rE0KDsIQ2vwW7CXg
+AAAEBpBccNokUmgCG/iyxZ4UX2aEkdQ2VZ9jA2ueaZlgtGE4D8sa3A/mQMCtBUS8MxeMLw
++Ig76sTQoOwhDa/BbsJeAAAAEmZsdXh2MkB0c2NrdWJlLWRldgECAw==
+-----END OPENSSH PRIVATE KEY-----
+  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:15:14
+❯ k get namespace
+NAME                STATUS   AGE
+aad-pod-identity    Active   5d22h
+api-template        Active   5d20h
+aqua                Active   4d18h
+default             Active   5d23h
+flux-system         Active   5d22h
+gatekeeper-system   Active   5d23h
+ingress-nginx       Active   5d1h
+keda                Active   5d22h
+kube-node-lease     Active   5d23h
+kube-public         Active   5d23h
+kube-system         Active   5d23h
+kubecost            Active   5d1h
+kubed               Active   5d22h
+kured               Active   5d22h
+logging             Active   5d22h
+monitoring          Active   5d22h
+  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:20:14
+❯ k get namespace aqua -o yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2022-07-07T20:47:01Z"
+  labels:
+    kubernetes.io/metadata.name: aqua
+    kustomize.toolkit.fluxcd.io/name: infrastructure
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+  name: aqua
+  resourceVersion: "840073"
+  uid: 5bf12fb7-d1ac-452b-93eb-499b8e457dc0
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
+  ~                                                                                                                                             11:20:27
+❯ dig -x 68.48.112.110
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 68.48.112.110
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 19469
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;110.112.48.68.in-addr.arpa.	IN	PTR
+
+;; ANSWER SECTION:
+110.112.48.68.in-addr.arpa. 3600 IN	PTR	c-68-48-112-110.hsd1.mi.comcast.net.
+
+;; Query time: 152 msec
+;; SERVER: 192.168.0.3#53(192.168.0.3)
+;; WHEN: Tue Jul 12 11:54:42 EDT 2022
+;; MSG SIZE  rcvd: 104
+
+  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:54:42
+❯ kcuc tsckube-live-eastus-06
+Switched to context "tsckube-live-eastus-06".
+  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:41
+❯ k get pods
+NAME                           READY   STATUS    RESTARTS   AGE
+profile-api-5d7f79c98d-59665   2/2     Running   0          4d3h
+profile-api-5d7f79c98d-82khd   2/2     Running   0          5d3h
+profile-api-5d7f79c98d-bpjq8   2/2     Running   0          6d3h
+profile-api-5d7f79c98d-dm5bv   2/2     Running   0          4d3h
+profile-api-5d7f79c98d-fkxjr   2/2     Running   1          6d3h
+profile-api-5d7f79c98d-kq5l6   2/2     Running   0          5d3h
+profile-api-5d7f79c98d-l6k76   2/2     Running   0          2d22h
+profile-api-5d7f79c98d-pvt7d   2/2     Running   1          5d4h
+profile-api-5d7f79c98d-rvll4   2/2     Running   0          4d3h
+profile-api-5d7f79c98d-rwmfz   2/2     Running   0          5d3h
+profile-api-5d7f79c98d-sv2vf   2/2     Running   0          6d3h
+profile-api-5d7f79c98d-whg5h   2/2     Running   1          6d4h
+  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:43
+❯ k get ing -A
+NAMESPACE                       NAME                           CLASS    HOSTS                                           ADDRESS        PORTS     AGE
+activation-api-live             activation-api-live            &lt;none&gt;   activation.cloud.techsmith.com                  20.72.149.76   80, 443   180d
+api-template                    api-template                   &lt;none&gt;   api-template.cloud.techsmith.com                20.72.149.76   80, 443   180d
+audiate-token-service           audiate-token-service          &lt;none&gt;   audiatetoken.cloud.techsmith.com                20.72.149.76   80, 443   180d
+auth-event-log-handling         auth-event-log-handling        &lt;none&gt;   autheventloghandling.cloud.techsmith.com        20.72.149.76   80, 443   180d
+caption-service                 caption-service-api            &lt;none&gt;   caption.cloud.techsmith.com                     20.72.149.76   80, 443   180d
+cloudcore                       cloudcore-embed-api            &lt;none&gt;   embed.cloud.techsmith.com                       20.72.149.76   80, 443   151d
+cloudcore                       cloudcore-storage-api          &lt;none&gt;   storage.cloud.techsmith.com                     20.72.149.76   80, 443   71d
+cloudcore                       cloudcore-thumbnail-api        &lt;none&gt;   thumbnail.cloud.techsmith.com                   20.72.149.76   80, 443   180d
+cluster-shared                  deployed                       &lt;none&gt;   deployed.cloud.techsmith.com                    20.72.149.76   80, 443   180d
+email-marketing-api-live        email-marketing-api-live       &lt;none&gt;   emailmarketing.cloud.techsmith.com              20.72.149.76   80, 443   180d
+email-service                   email-service-api              &lt;none&gt;   email.cloud.techsmith.com                       20.72.149.76   80, 443   179d
+encode-api                      encode-api                     &lt;none&gt;   encode.cloud.techsmith.com                      20.72.149.76   80, 443   180d
+entitlements-live               entitlements-live              &lt;none&gt;   entitlement.cloud.techsmith.com                 20.72.149.76   80, 443   180d
+feedback-live                   feedback                       &lt;none&gt;   videoreview.techsmith.com                       20.72.149.76   80, 443   180d
+group-api-live                  group-api-live                 &lt;none&gt;   group.cloud.techsmith.com                       20.72.149.76   80, 443   180d
+hls-proxy                       hls-proxy                      &lt;none&gt;   hlsproxy.cloud.techsmith.com                    20.72.149.76   80, 443   180d
+maintenancerenewal-api-live     maintenancerenewal-api-live    &lt;none&gt;   maintrenewal.cloud.techsmith.com                20.72.149.76   80, 443   180d
+media-analytics-live            media-analytics-live           &lt;none&gt;   media-analytics.cloud.techsmith.com             20.72.149.76   80, 443   180d
+monitoring                      kube-prometheus-grafana        &lt;none&gt;   grafana-east.cloud.techsmith.com                20.72.149.76   80, 443   180d
+multiplexing-api                multiplexing-api               &lt;none&gt;   multiplexing.cloud.techsmith.com                20.72.149.76   80, 443   180d
+notification-service-api-live   notification-api-live          &lt;none&gt;   notification.cloud.techsmith.com                20.72.149.76   80, 443   180d
+olympus                         olympusapi                     &lt;none&gt;   olympus.cloud.techsmith.com                     20.72.149.76   80, 443   180d
+present                         present-web                    &lt;none&gt;   *.techsmithrelay.com                            20.72.149.76   80, 443   180d
+profile-api                     profile-api                    &lt;none&gt;   profile.cloud.techsmith.com                     20.72.149.76   80, 443   180d
+provision-service-live          provision-service              &lt;none&gt;   provisioning.cloud.techsmith.com                20.72.149.76   80, 443   180d
+provision-web-live              provision-web                  &lt;none&gt;   provisioningportal.cloud.techsmith.com          20.72.149.76   80, 443   180d
+quizzing-service-live           quizzing-service-web           &lt;none&gt;   quiz.cloud.techsmith.com                        20.72.149.76   80, 443   180d
+subscription-management-live    subscription-management-live   &lt;none&gt;   subscription.cloud.techsmith.com                20.72.149.76   80, 443   180d
+zoom-api                        zoom-api                       &lt;none&gt;   zoomapi.cloud.knowmia.com,zoomapp.knowmia.com   20.72.149.76   80, 443   180d
+  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:50
+❯ kcn present
+Context "tsckube-live-eastus-06" modified.
+  ~                                                                                                           ⎈ tsckube-live-eastus-06/present  11:55:56
+❯ k get pods
+NAME                                                       READY   STATUS    RESTARTS   AGE
+present-account-deleted-worker-fccd48fb-d4fpn              1/1     Running   0          112m
+present-admin-action-worker-666ddfc8fc-8gjts               1/1     Running   0          112m
+present-assessment-deleted-worker-c5f4785d8-b4p9x          1/1     Running   0          112m
+present-bitrate-ladder-completed-worker-56c994446c-m4d7t   1/1     Running   0          112m
+present-complete-media-worker-776b8b9459-wf8dx             1/1     Running   0          112m
+present-content-expiration-worker-54cf978f79-bmb8f         1/1     Running   0          112m
+present-delete-expired-user-worker-7fd775dc6b-72lv7        1/1     Running   0          112m
+present-delete-media-cleanup-worker-74ffc67d6-tj8vj        1/1     Running   0          112m
+present-group-changed-worker-76456754c7-7wbtw              1/1     Running   0          112m
+present-media-changed-worker-7596584644-488kn              1/1     Running   0          112m
+present-media-viewed-worker-5b644fdb88-s65zc               1/1     Running   0          112m
+present-quiz-report-generated-worker-745d7797db-6rcfl      1/1     Running   0          112m
+present-quiz-report-generated-worker-745d7797db-hrkjh      1/1     Running   0          112m
+present-swap-media-worker-9c6794d88-kb9zs                  1/1     Running   0          112m
+present-user-logged-in-worker-597b4d8f7-46fmk              1/1     Running   0          111m
+present-user-logged-in-worker-597b4d8f7-qvfdr              1/1     Running   0          112m
+present-web-canary-5c75477fd4-4xhcr                        1/1     Running   0          107m
+present-web-canary-5c75477fd4-jdxx2                        1/1     Running   0          106m
+present-web-canary-5c75477fd4-lsgzb                        1/1     Running   0          106m
+present-web-canary-5c75477fd4-wd2w8                        1/1     Running   0          107m
+present-web-canary-5c75477fd4-z2pmg                        1/1     Running   0          107m
+present-web-canary-5c75477fd4-zf8wq                        1/1     Running   0          106m
+  ~                                                                                                           ⎈ tsckube-live-eastus-06/present  11:55:57
+❯ kcuc tsckube-live-westus-06
+Switched to context "tsckube-live-westus-06".
+  ~                                                                                                              ⎈ tsckube-live-westus-06/aqua  11:56:38
+❯ k get pods -n present
+NAME                                       READY   STATUS    RESTARTS   AGE
+present-web-canary-west-5bc6554c5f-gk2xr   1/1     Running   0          107m
+present-web-canary-west-5bc6554c5f-hnw8x   1/1     Running   0          108m
+present-web-canary-west-5bc6554c5f-vk4nh   1/1     Running   0          109m
+  ~                                                                                                                                        5s  11:56:45
+❯ dig -x 107.116.7.4
+
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 107.116.7.4
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN, id: 48184
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;4.7.116.107.in-addr.arpa.	IN	PTR
+
+;; AUTHORITY SECTION:
+116.107.in-addr.arpa.	1454	IN	SOA	alpinetdns.mycingular.net. dnsadmin.cingular.com. 2011020700 10800 3600 604800 86400
+
+;; Query time: 116 msec
+;; SERVER: 192.168.0.3#53(192.168.0.3)
+;; WHEN: Tue Jul 12 12:04:10 EDT 2022
+;; MSG SIZE  rcvd: 135
+
+  ~                                                                                                              ⎈ tsckube-live-westus-06/aqua  12:04:10
+❯ k get pod https://portal.azure.com/\#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/%2Fsubscriptions%2F52810ca4-6213-4a61-bbee-3a62a3a76905%2FresourceGroups%2Ftsccorpcloud-aks-live%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Ftsccorpcloud-aks-live-oms/ConfigurationId/%2Fsubscriptions%2F52810ca4-6213-4a61-bbee-3a62a3a76905%2FresourceGroups%2Ftsccorpcloud-aks-live%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F9ee127b4-afa4-47a8-8247-99a0c7a2629b/Type/workbook/WorkbookTemplateName/alans%20nginx%20log
+  ~</string>
+			<key>value</key>
+			<string>Last login: Fri Jul  8 14:56:47 on ttys002\n  ~/git/k8s-apps-test   main +551                                                                                                             15:24:11\n❯ cd ../k8s-config\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:24:16\n❯ git log\n  ~/git/k8s-config   main ⇣1 *1                                                                                                 ✘ PIPE  22s  15:24:41\n❯ man docker-build\nNo manual entry for docker-build\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:41\n❯ man docker\nNo manual entry for docker\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:45\n❯ docker -h\nFlag shorthand -h has been deprecated, please use --help\ndocker\nUsage:  docker [OPTIONS] COMMAND\n\nA self-sufficient runtime for containers\n\nOptions:\n      --config string      Location of client config files (default "/Users/a.brevick/.docker")\n  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker\n                           context use")\n  -D, --debug              Enable debug mode\n  -H, --host list          Daemon socket(s) to connect to\n  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")\n      --tls                Use TLS; implied by --tlsverify\n      --tlscacert string   Trust certs signed only by this CA (default "/Users/a.brevick/.docker/ca.pem")\n      --tlscert string     Path to TLS certificate file (default "/Users/a.brevick/.docker/cert.pem")\n      --tlskey string      Path to TLS key file (default "/Users/a.brevick/.docker/key.pem")\n      --tlsverify          Use TLS and verify the remote\n  -v, --version            Print version information and quit\n\nManagement Commands:\n  builder     Manage builds\n  buildx*     Docker Buildx (Docker Inc., v0.8.2)\n  compose*    Docker Compose (Docker Inc., v2.6.0)\n  config      Manage Docker configs\n  container   Manage containers\n  context     Manage contexts\n  image       Manage images\n  manifest    Manage Docker image manifests and manifest lists\n  network     Manage networks\n  node        Manage Swarm nodes\n  plugin      Manage plugins\n  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)\n  scan*       Docker Scan (Docker Inc., v0.17.0)\n  secret      Manage Docker secrets\n  service     Manage services\n  stack       Manage Docker stacks\n  swarm       Manage Swarm\n  system      Manage Docker\n  trust       Manage trust on Docker images\n  volume      Manage volumes\n\nCommands:\n  attach      Attach local standard input, output, and error streams to a running container\n  build       Build an image from a Dockerfile\n  commit      Create a new image from a container's changes\n  cp          Copy files/folders between a container and the local filesystem\n  create      Create a new container\n  diff        Inspect changes to files or directories on a container's filesystem\n  events      Get real time events from the server\n  exec        Run a command in a running container\n  export      Export a container's filesystem as a tar archive\n  history     Show the history of an image\n  images      List images\n  import      Import the contents from a tarball to create a filesystem image\n  info        Display system-wide information\n  inspect     Return low-level information on Docker objects\n  kill        Kill one or more running containers\n  load        Load an image from a tar archive or STDIN\n  login       Log in to a Docker registry\n  logout      Log out from a Docker registry\n  logs        Fetch the logs of a container\n  pause       Pause all processes within one or more containers\n  port        List port mappings or a specific mapping for the container\n  ps          List containers\n  pull        Pull an image or a repository from a registry\n  push        Push an image or a repository to a registry\n  rename      Rename a container\n  restart     Restart one or more containers\n  rm          Remove one or more containers\n  rmi         Remove one or more images\n  run         Run a command in a new container\n  save        Save one or more images to a tar archive (streamed to STDOUT by default)\n  search      Search the Docker Hub for images\n  start       Start one or more stopped containers\n  stats       Display a live stream of container(s) resource usage statistics\n  stop        Stop one or more running containers\n  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE\n  top         Display the running processes of a container\n  unpause     Unpause all processes within one or more containers\n  update      Update configuration of one or more containers\n  version     Show the Docker version information\n  wait        Block until one or more containers stop, then print their exit codes\n\nRun 'docker COMMAND --help' for more information on a command.\n\nTo get more help with docker, check out our guides at https://docs.docker.com/go/guides/\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:50\n❯ docker build -h\nFlag shorthand -h has been deprecated, please use --help\n\nUsage:  docker build [OPTIONS] PATH | URL | -\n\nBuild an image from a Dockerfile\n\nOptions:\n      --add-host list           Add a custom host-to-IP mapping (host:ip)\n      --build-arg list          Set build-time variables\n      --cache-from strings      Images to consider as cache sources\n      --disable-content-trust   Skip image verification (default true)\n  -f, --file string             Name of the Dockerfile (Default is 'PATH/Dockerfile')\n      --iidfile string          Write the image ID to the file\n      --isolation string        Container isolation technology\n      --label list              Set metadata for an image\n      --network string          Set the networking mode for the RUN instructions during build (default "default")\n      --no-cache                Do not use cache when building the image\n  -o, --output stringArray      Output destination (format: type=local,dest=path)\n      --platform string         Set platform if server is multi-platform capable\n      --progress string         Set type of progress output (auto, plain, tty). Use plain to show container output (default "auto")\n      --pull                    Always attempt to pull a newer version of the image\n  -q, --quiet                   Suppress the build output and print image ID on success\n      --secret stringArray      Secret file to expose to the build (only if BuildKit enabled): id=mysecret,src=/local/secret\n      --ssh stringArray         SSH agent socket or keys to expose to the build (only if BuildKit enabled) (format: default|&lt;id&gt;[=&lt;socket&gt;|&lt;key&gt;[,&lt;key&gt;]])\n  -t, --tag list                Name and optionally a tag in the 'name:tag' format\n      --target string           Set the target build stage to build.\n\nUse 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               15:45:53\n❯ dotnet -h\nUsage: dotnet [runtime-options] [path-to-application] [arguments]\n\nExecute a .NET application.\n\nruntime-options:\n  --additionalprobingpath &lt;path&gt;   Path containing probing policy and assemblies to probe for.\n  --additional-deps &lt;path&gt;         Path to additional deps.json file.\n  --depsfile                       Path to &lt;application&gt;.deps.json file.\n  --fx-version &lt;version&gt;           Version of the installed Shared Framework to use to run the application.\n  --roll-forward &lt;setting&gt;         Roll forward to framework version  (LatestPatch, Minor, LatestMinor, Major, LatestMajor, Disable).\n  --runtimeconfig                  Path to &lt;application&gt;.runtimeconfig.json file.\n\npath-to-application:\n  The path to an application .dll file to execute.\n\nUsage: dotnet [sdk-options] [command] [command-options] [arguments]\n\nExecute a .NET SDK command.\n\nsdk-options:\n  -d|--diagnostics  Enable diagnostic output.\n  -h|--help         Show command line help.\n  --info            Display .NET information.\n  --list-runtimes   Display the installed runtimes.\n  --list-sdks       Display the installed SDKs.\n  --version         Display .NET SDK version in use.\n\nSDK commands:\n  add               Add a package or reference to a .NET project.\n  build             Build a .NET project.\n  build-server      Interact with servers started by a build.\n  clean             Clean build outputs of a .NET project.\n  format            Apply style preferences to a project or solution.\n  help              Show command line help.\n  list              List project references of a .NET project.\n  msbuild           Run Microsoft Build Engine (MSBuild) commands.\n  new               Create a new .NET project or file.\n  nuget             Provides additional NuGet commands.\n  pack              Create a NuGet package.\n  publish           Publish a .NET project for deployment.\n  remove            Remove a package or reference from a .NET project.\n  restore           Restore dependencies specified in a .NET project.\n  run               Build and run a .NET project output.\n  sdk               Manage .NET SDK installation.\n  sln               Modify Visual Studio solution files.\n  store             Store the specified assemblies in the runtime package store.\n  test              Run unit tests using the test runner specified in a .NET project.\n  tool              Install or manage tools that extend the .NET experience.\n  vstest            Run Microsoft Test Engine (VSTest) commands.\n  workload          Manage optional workloads.\n\nAdditional commands from bundled tools:\n  dev-certs         Create and manage development certificates.\n  fsi               Start F# Interactive / execute F# scripts.\n  sql-cache         SQL Server cache command-line tools.\n  user-secrets      Manage development user secrets.\n  watch             Start a file watcher that runs a command when files change.\n\nRun 'dotnet [command] --help' for more information on a command.\n  ~/git/k8s-config   main ⇣1 *1                                                                                                          4s  16:03:18\n❯ dotnet publish -h\nDescription:\n  Publisher for the .NET Platform\n\nUsage:\n  dotnet publish [&lt;PROJECT | SOLUTION&gt;...] [options]\n\nArguments:\n  &lt;PROJECT | SOLUTION&gt;  The project or solution file to operate on. If a file is not specified, the command will search the current directory for one.\n\nOptions:\n  --use-current-runtime                Use current runtime as the target runtime.\n  -o, --output &lt;OUTPUT_DIR&gt;            The output directory to place the published artifacts in.\n  --manifest &lt;MANIFEST&gt;                The path to a target manifest file that contains the list of packages to be excluded from the publish step.\n  --no-build                           Do not build the project before publishing. Implies --no-restore.\n  --sc, --self-contained               Publish the .NET runtime with your application so the runtime doesn't need to be installed on the target machine.\n                                       The default is 'true' if a runtime identifier is specified.\n  --no-self-contained                  Publish your application as a framework dependent application. A compatible .NET runtime must be installed on the\n                                       target machine to run your application.\n  --nologo                             Do not display the startup banner or the copyright message.\n  -f, --framework &lt;FRAMEWORK&gt;          The target framework to publish for. The target framework has to be specified in the project file.\n  -r, --runtime &lt;RUNTIME_IDENTIFIER&gt;   The target runtime to publish for. This is used when creating a self-contained deployment.\n                                       The default is to publish a framework-dependent application.\n  -c, --configuration &lt;CONFIGURATION&gt;  The configuration to publish for. The default for most projects is 'Debug'.\n  --version-suffix &lt;VERSION_SUFFIX&gt;    Set the value of the $(VersionSuffix) property to use when building the project.\n  --interactive                        Allows the command to stop and wait for user input or action (for example to complete authentication).\n  --no-restore                         Do not restore the project before building.\n  -v, --verbosity &lt;LEVEL&gt;              Set the MSBuild verbosity level. Allowed values are q[uiet], m[inimal], n[ormal], d[etailed], and diag[nostic].\n  -a, --arch &lt;arch&gt;                    The target architecture.\n  --os &lt;os&gt;                            The target operating system.\n  -?, -h, --help                       Show command line help.\n\n\n\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               16:03:26\n❯ ls\nDockerfile                                docs                                      post-infrastructure\nREADME.md                                 image automation helper.md                scripts\nSOPS.md                                   image-automation-helper-kustomizations.sh setup a new kubernetes service.md\napps                                      infrastructure                            tf\ncatalog-info.yaml                         local-kind.md\nclusters                                  mkdocs.yml\n  ~/git/k8s-config   main ⇣1 *1                                                                                                               10:01:30\n❯ code .\n  ~/git/k8s-config   main ⇣1 *1                                                                         ⎈ tsckube-live-eastus-06/profile-api  10:01:34\n❯ k get secret -n flux-system flux-system\nError from server (NotFound): namespaces "flux-system" not found\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                      ⎈ tsckube-live-eastus-06/profile-api  10:07:29\n❯ kcuc tsckube-dev-eastus-fluxv2\nSwitched to context "tsckube-dev-eastus-fluxv2".\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                  ⎈ tsckube-dev-eastus-fluxv2/api-template  10:07:38\n❯ k get secret -n flux-system flux-system\nNAME          TYPE     DATA   AGE\nflux-system   Opaque   3      5d21h\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                  ⎈ tsckube-dev-eastus-fluxv2/api-template  10:11:57\n❯ k get secret -n flux-system flux-system -o yaml\napiVersion: v1\ndata:\n  identity: LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUtJdjE0TW03elZ1UVEzU2QvOTNqM3BZZXdIZjhHaTA2VHpkbXF6S3NobFdvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFQ3ZTSHdsN2tZZ1lDMSsxVU5JYnFDd05BU0kwWERZK1MzVWhrQ3IrWE5OUkFvTXl5T01GawpxVm9qQ0oyZmtLSUY4clJNalFjNXNnblRReDBTdCtTM0lnPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=\n  identity.pub: LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUZrd0V3WUhLb1pJemowQ0FRWUlLb1pJemowREFRY0RRZ0FFQ3ZTSHdsN2tZZ1lDMSsxVU5JYnFDd05BU0kwWApEWStTM1Voa0NyK1hOTlJBb015eU9NRmtxVm9qQ0oyZmtLSUY4clJNalFjNXNnblRReDBTdCtTM0lnPT0KLS0tLS1FTkQgUFVCTElDIEtFWS0tLS0tCg==\n  known_hosts: Z2l0aHViLmNvbSBlY2RzYS1zaGEyLW5pc3RwMjU2IEFBQUFFMlZqWkhOaExYTm9ZVEl0Ym1semRIQXlOVFlBQUFBSWJtbHpkSEF5TlRZQUFBQkJCRW1LU0VOalFFZXpPbXhrWk15N29wS2d3RkI5bmt0NVlScllNak51RzVOODd1UmdnNkNMcmJvNXdBZFQveTZ2MG1LVjBVMncwV1oyWUIvKytUcG9ja2c9\nkind: Secret\nmetadata:\n  creationTimestamp: "2022-07-06T16:30:42Z"\n  name: flux-system\n  namespace: flux-system\n  resourceVersion: "7169"\n  uid: ccf88be0-eddd-4e11-b026-6287848a4985\ntype: Opaque\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:12:01\n❯ file ~/tmp/pub-key\n/Users/a.brevick/tmp/pub-key: ASCII text\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:21:19\n❯ ls\nDockerfile                                docs                                      post-infrastructure\nREADME.md                                 image automation helper.md                scripts\nSOPS.md                                   image-automation-helper-kustomizations.sh setup a new kubernetes service.md\napps                                      infrastructure                            tf\ncatalog-info.yaml                         local-kind.md\nclusters                                  mkdocs.yml\n  ~/git/k8s-config   main ⇣3 *1 ?1                                                                                                            10:36:02\n❯ cd\n  ~                                                                                                                                             10:36:36\n❯ ssh-keygen -t ed25519 -C "your_email@example.comls"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/a.brevick/.ssh/id_ed25519): h^C\n  ~                                                                                                                                      ✘ INT  10:37:13\n❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev"\nGenerating public/private ed25519 key pair.\nEnter file in which to save the key (/Users/a.brevick/.ssh/id_ed25519): ^C\n  ~                                                                                                                                      ✘ INT  10:37:41\n❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test\nGenerating public/private ed25519 key pair.\nEnter passphrase (empty for no passphrase):\n\n  ~                                                                                                                                      ✘ INT  10:37:56\n❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -p""\n/Users/a.brevick/tmp/k8s-apps-test: No such file or directory\n  ~                                                                                                                                      ✘ 255  10:37:58\n❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -N\nssh-keygen: option requires an argument -- N\nusage: ssh-keygen [-q] [-a rounds] [-b bits] [-C comment] [-f output_keyfile]\n                  [-m format] [-N new_passphrase] [-O option]\n                  [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]\n                  [-w provider] [-Z cipher]\n       ssh-keygen -p [-a rounds] [-f keyfile] [-m format] [-N new_passphrase]\n                   [-P old_passphrase] [-Z cipher]\n       ssh-keygen -i [-f input_keyfile] [-m key_format]\n       ssh-keygen -e [-f input_keyfile] [-m key_format]\n       ssh-keygen -y [-f input_keyfile]\n       ssh-keygen -c [-a rounds] [-C comment] [-f keyfile] [-P passphrase]\n       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]\n       ssh-keygen -B [-f input_keyfile]\n       ssh-keygen -D pkcs11\n       ssh-keygen -F hostname [-lv] [-f known_hosts_file]\n       ssh-keygen -H [-f known_hosts_file]\n       ssh-keygen -K [-a rounds] [-w provider]\n       ssh-keygen -R hostname [-f known_hosts_file]\n       ssh-keygen -r hostname [-g] [-f input_keyfile]\n       ssh-keygen -M generate [-O option] output_file\n       ssh-keygen -M screen [-f input_file] [-O option] output_file\n       ssh-keygen -I certificate_identity -s ca_key [-hU] [-D pkcs11_provider]\n                  [-n principals] [-O option] [-V validity_interval]\n                  [-z serial_number] file ...\n       ssh-keygen -L [-f input_keyfile]\n       ssh-keygen -A [-a rounds] [-f prefix_path]\n       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]\n                  file ...\n       ssh-keygen -Q [-l] -f krl_file [file ...]\n       ssh-keygen -Y find-principals -s signature_file -f allowed_signers_file\n       ssh-keygen -Y check-novalidate -n namespace -s signature_file\n       ssh-keygen -Y sign -f key_file -n namespace file ...\n       ssh-keygen -Y verify -f allowed_signers_file -I signer_identity\n                  -n namespace -s signature_file [-r revocation_file]\n  ~                                                                                                                                             10:38:06\n❯ ssh-keygen -t ed25519 -C "fluxv2@tsckube-dev" -f ~/tmp/k8s-apps-test  -N ''\nGenerating public/private ed25519 key pair.\nYour identification has been saved in /Users/a.brevick/tmp/k8s-apps-test\nYour public key has been saved in /Users/a.brevick/tmp/k8s-apps-test.pub\nThe key fingerprint is:\nSHA256:Tmd+g2jSdzlNsg2TaM554YZn8zJY6Rj+2ZgF9pyJ5aY fluxv2@tsckube-dev\nThe key's randomart image is:\n+--[ED25519 256]--+\n|                 |\n|                 |\n|                 |\n|           . .   |\n|        S = O.o  |\n|       + O.*o^ o |\n|      . =.O*/ @  |\n|       o .+B+&amp;   |\n|           .Eoo  |\n+----[SHA256]-----+\n  ~                                                                                                                                             10:38:09\n❯ cat ~/tmp/k8s-apps-test.pub\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIID8sa3A/mQMCtBUS8MxeMLw+Ig76sTQoOwhDa/BbsJe fluxv2@tsckube-dev\n  ~                                                                                                                                             10:38:40\n❯ cat ~/tmp/k8s-apps-test\n-----BEGIN OPENSSH PRIVATE KEY-----\nb3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW\nQyNTUxOQAAACCA/LGtwP5kDArQVEvDMXjC8PiIO+rE0KDsIQ2vwW7CXgAAAJi70r6au9K+\nmgAAAAtzc2gtZWQyNTUxOQAAACCA/LGtwP5kDArQVEvDMXjC8PiIO+rE0KDsIQ2vwW7CXg\nAAAEBpBccNokUmgCG/iyxZ4UX2aEkdQ2VZ9jA2ueaZlgtGE4D8sa3A/mQMCtBUS8MxeMLw\n+Ig76sTQoOwhDa/BbsJeAAAAEmZsdXh2MkB0c2NrdWJlLWRldgECAw==\n-----END OPENSSH PRIVATE KEY-----\n  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:15:14\n❯ k get namespace\nNAME                STATUS   AGE\naad-pod-identity    Active   5d22h\napi-template        Active   5d20h\naqua                Active   4d18h\ndefault             Active   5d23h\nflux-system         Active   5d22h\ngatekeeper-system   Active   5d23h\ningress-nginx       Active   5d1h\nkeda                Active   5d22h\nkube-node-lease     Active   5d23h\nkube-public         Active   5d23h\nkube-system         Active   5d23h\nkubecost            Active   5d1h\nkubed               Active   5d22h\nkured               Active   5d22h\nlogging             Active   5d22h\nmonitoring          Active   5d22h\n  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:20:14\n❯ k get namespace aqua -o yaml\napiVersion: v1\nkind: Namespace\nmetadata:\n  creationTimestamp: "2022-07-07T20:47:01Z"\n  labels:\n    kubernetes.io/metadata.name: aqua\n    kustomize.toolkit.fluxcd.io/name: infrastructure\n    kustomize.toolkit.fluxcd.io/namespace: flux-system\n  name: aqua\n  resourceVersion: "840073"\n  uid: 5bf12fb7-d1ac-452b-93eb-499b8e457dc0\nspec:\n  finalizers:\n  - kubernetes\nstatus:\n  phase: Active\n  ~                                                                                                                                             11:20:27\n❯ dig -x 68.48.112.110\n\n; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 68.48.112.110\n;; global options: +cmd\n;; Got answer:\n;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 19469\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 512\n;; QUESTION SECTION:\n;110.112.48.68.in-addr.arpa.\tIN\tPTR\n\n;; ANSWER SECTION:\n110.112.48.68.in-addr.arpa. 3600 IN\tPTR\tc-68-48-112-110.hsd1.mi.comcast.net.\n\n;; Query time: 152 msec\n;; SERVER: 192.168.0.3#53(192.168.0.3)\n;; WHEN: Tue Jul 12 11:54:42 EDT 2022\n;; MSG SIZE  rcvd: 104\n\n  ~                                                                                                   ⎈ tsckube-dev-eastus-fluxv2/api-template  11:54:42\n❯ kcuc tsckube-live-eastus-06\nSwitched to context "tsckube-live-eastus-06".\n  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:41\n❯ k get pods\nNAME                           READY   STATUS    RESTARTS   AGE\nprofile-api-5d7f79c98d-59665   2/2     Running   0          4d3h\nprofile-api-5d7f79c98d-82khd   2/2     Running   0          5d3h\nprofile-api-5d7f79c98d-bpjq8   2/2     Running   0          6d3h\nprofile-api-5d7f79c98d-dm5bv   2/2     Running   0          4d3h\nprofile-api-5d7f79c98d-fkxjr   2/2     Running   1          6d3h\nprofile-api-5d7f79c98d-kq5l6   2/2     Running   0          5d3h\nprofile-api-5d7f79c98d-l6k76   2/2     Running   0          2d22h\nprofile-api-5d7f79c98d-pvt7d   2/2     Running   1          5d4h\nprofile-api-5d7f79c98d-rvll4   2/2     Running   0          4d3h\nprofile-api-5d7f79c98d-rwmfz   2/2     Running   0          5d3h\nprofile-api-5d7f79c98d-sv2vf   2/2     Running   0          6d3h\nprofile-api-5d7f79c98d-whg5h   2/2     Running   1          6d4h\n  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:43\n❯ k get ing -A\nNAMESPACE                       NAME                           CLASS    HOSTS                                           ADDRESS        PORTS     AGE\nactivation-api-live             activation-api-live            &lt;none&gt;   activation.cloud.techsmith.com                  20.72.149.76   80, 443   180d\napi-template                    api-template                   &lt;none&gt;   api-template.cloud.techsmith.com                20.72.149.76   80, 443   180d\naudiate-token-service           audiate-token-service          &lt;none&gt;   audiatetoken.cloud.techsmith.com                20.72.149.76   80, 443   180d\nauth-event-log-handling         auth-event-log-handling        &lt;none&gt;   autheventloghandling.cloud.techsmith.com        20.72.149.76   80, 443   180d\ncaption-service                 caption-service-api            &lt;none&gt;   caption.cloud.techsmith.com                     20.72.149.76   80, 443   180d\ncloudcore                       cloudcore-embed-api            &lt;none&gt;   embed.cloud.techsmith.com                       20.72.149.76   80, 443   151d\ncloudcore                       cloudcore-storage-api          &lt;none&gt;   storage.cloud.techsmith.com                     20.72.149.76   80, 443   71d\ncloudcore                       cloudcore-thumbnail-api        &lt;none&gt;   thumbnail.cloud.techsmith.com                   20.72.149.76   80, 443   180d\ncluster-shared                  deployed                       &lt;none&gt;   deployed.cloud.techsmith.com                    20.72.149.76   80, 443   180d\nemail-marketing-api-live        email-marketing-api-live       &lt;none&gt;   emailmarketing.cloud.techsmith.com              20.72.149.76   80, 443   180d\nemail-service                   email-service-api              &lt;none&gt;   email.cloud.techsmith.com                       20.72.149.76   80, 443   179d\nencode-api                      encode-api                     &lt;none&gt;   encode.cloud.techsmith.com                      20.72.149.76   80, 443   180d\nentitlements-live               entitlements-live              &lt;none&gt;   entitlement.cloud.techsmith.com                 20.72.149.76   80, 443   180d\nfeedback-live                   feedback                       &lt;none&gt;   videoreview.techsmith.com                       20.72.149.76   80, 443   180d\ngroup-api-live                  group-api-live                 &lt;none&gt;   group.cloud.techsmith.com                       20.72.149.76   80, 443   180d\nhls-proxy                       hls-proxy                      &lt;none&gt;   hlsproxy.cloud.techsmith.com                    20.72.149.76   80, 443   180d\nmaintenancerenewal-api-live     maintenancerenewal-api-live    &lt;none&gt;   maintrenewal.cloud.techsmith.com                20.72.149.76   80, 443   180d\nmedia-analytics-live            media-analytics-live           &lt;none&gt;   media-analytics.cloud.techsmith.com             20.72.149.76   80, 443   180d\nmonitoring                      kube-prometheus-grafana        &lt;none&gt;   grafana-east.cloud.techsmith.com                20.72.149.76   80, 443   180d\nmultiplexing-api                multiplexing-api               &lt;none&gt;   multiplexing.cloud.techsmith.com                20.72.149.76   80, 443   180d\nnotification-service-api-live   notification-api-live          &lt;none&gt;   notification.cloud.techsmith.com                20.72.149.76   80, 443   180d\nolympus                         olympusapi                     &lt;none&gt;   olympus.cloud.techsmith.com                     20.72.149.76   80, 443   180d\npresent                         present-web                    &lt;none&gt;   *.techsmithrelay.com                            20.72.149.76   80, 443   180d\nprofile-api                     profile-api                    &lt;none&gt;   profile.cloud.techsmith.com                     20.72.149.76   80, 443   180d\nprovision-service-live          provision-service              &lt;none&gt;   provisioning.cloud.techsmith.com                20.72.149.76   80, 443   180d\nprovision-web-live              provision-web                  &lt;none&gt;   provisioningportal.cloud.techsmith.com          20.72.149.76   80, 443   180d\nquizzing-service-live           quizzing-service-web           &lt;none&gt;   quiz.cloud.techsmith.com                        20.72.149.76   80, 443   180d\nsubscription-management-live    subscription-management-live   &lt;none&gt;   subscription.cloud.techsmith.com                20.72.149.76   80, 443   180d\nzoom-api                        zoom-api                       &lt;none&gt;   zoomapi.cloud.knowmia.com,zoomapp.knowmia.com   20.72.149.76   80, 443   180d\n  ~                                                                                                       ⎈ tsckube-live-eastus-06/profile-api  11:55:50\n❯ kcn present\nContext "tsckube-live-eastus-06" modified.\n  ~                                                                                                           ⎈ tsckube-live-eastus-06/present  11:55:56\n❯ k get pods\nNAME                                                       READY   STATUS    RESTARTS   AGE\npresent-account-deleted-worker-fccd48fb-d4fpn              1/1     Running   0          112m\npresent-admin-action-worker-666ddfc8fc-8gjts               1/1     Running   0          112m\npresent-assessment-deleted-worker-c5f4785d8-b4p9x          1/1     Running   0          112m\npresent-bitrate-ladder-completed-worker-56c994446c-m4d7t   1/1     Running   0          112m\npresent-complete-media-worker-776b8b9459-wf8dx             1/1     Running   0          112m\npresent-content-expiration-worker-54cf978f79-bmb8f         1/1     Running   0          112m\npresent-delete-expired-user-worker-7fd775dc6b-72lv7        1/1     Running   0          112m\npresent-delete-media-cleanup-worker-74ffc67d6-tj8vj        1/1     Running   0          112m\npresent-group-changed-worker-76456754c7-7wbtw              1/1     Running   0          112m\npresent-media-changed-worker-7596584644-488kn              1/1     Running   0          112m\npresent-media-viewed-worker-5b644fdb88-s65zc               1/1     Running   0          112m\npresent-quiz-report-generated-worker-745d7797db-6rcfl      1/1     Running   0          112m\npresent-quiz-report-generated-worker-745d7797db-hrkjh      1/1     Running   0          112m\npresent-swap-media-worker-9c6794d88-kb9zs                  1/1     Running   0          112m\npresent-user-logged-in-worker-597b4d8f7-46fmk              1/1     Running   0          111m\npresent-user-logged-in-worker-597b4d8f7-qvfdr              1/1     Running   0          112m\npresent-web-canary-5c75477fd4-4xhcr                        1/1     Running   0          107m\npresent-web-canary-5c75477fd4-jdxx2                        1/1     Running   0          106m\npresent-web-canary-5c75477fd4-lsgzb                        1/1     Running   0          106m\npresent-web-canary-5c75477fd4-wd2w8                        1/1     Running   0          107m\npresent-web-canary-5c75477fd4-z2pmg                        1/1     Running   0          107m\npresent-web-canary-5c75477fd4-zf8wq                        1/1     Running   0          106m\n  ~                                                                                                           ⎈ tsckube-live-eastus-06/present  11:55:57\n❯ kcuc tsckube-live-westus-06\nSwitched to context "tsckube-live-westus-06".\n  ~                                                                                                              ⎈ tsckube-live-westus-06/aqua  11:56:38\n❯ k get pods -n present\nNAME                                       READY   STATUS    RESTARTS   AGE\npresent-web-canary-west-5bc6554c5f-gk2xr   1/1     Running   0          107m\npresent-web-canary-west-5bc6554c5f-hnw8x   1/1     Running   0          108m\npresent-web-canary-west-5bc6554c5f-vk4nh   1/1     Running   0          109m\n  ~                                                                                                                                        5s  11:56:45\n❯ dig -x 107.116.7.4\n\n\n; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; -x 107.116.7.4\n;; global options: +cmd\n;; Got answer:\n;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NXDOMAIN, id: 48184\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version: 0, flags:; udp: 512\n;; QUESTION SECTION:\n;4.7.116.107.in-addr.arpa.\tIN\tPTR\n\n;; AUTHORITY SECTION:\n116.107.in-addr.arpa.\t1454\tIN\tSOA\talpinetdns.mycingular.net. dnsadmin.cingular.com. 2011020700 10800 3600 604800 86400\n\n;; Query time: 116 msec\n;; SERVER: 192.168.0.3#53(192.168.0.3)\n;; WHEN: Tue Jul 12 12:04:10 EDT 2022\n;; MSG SIZE  rcvd: 135\n\n  ~                                                                                                              ⎈ tsckube-live-westus-06/aqua  12:04:10\n❯ k get pod https://portal.azure.com/\\#view/AppInsightsExtension/UsageNotebookBlade/ComponentId/%2Fsubscriptions%2F52810ca4-6213-4a61-bbee-3a62a3a76905%2FresourceGroups%2Ftsccorpcloud-aks-live%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Ftsccorpcloud-aks-live-oms/ConfigurationId/%2Fsubscriptions%2F52810ca4-6213-4a61-bbee-3a62a3a76905%2FresourceGroups%2Ftsccorpcloud-aks-live%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F9ee127b4-afa4-47a8-8247-99a0c7a2629b/Type/workbook/WorkbookTemplateName/alans%20nginx%20log\n  ~</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>SoundForEsc</key>
 	<false/>
@@ -1758,13 +2300,18 @@
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
-	<integer>4</integer>
+	<integer>6</integer>
 	<key>TerminalMargin</key>
 	<integer>5</integer>
 	<key>TerminalVMargin</key>
 	<integer>5</integer>
 	<key>TimeBetweenTips</key>
 	<real>604800</real>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Command History</string>
+		<string>Notes</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<true/>
 	<key>UseBorder</key>
