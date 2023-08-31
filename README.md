@@ -59,3 +59,11 @@ echo "install fonts from https://github.com/romkatv/powerlevel10k#manual-font-in
 https://mmazzarolo.com/blog/2022-04-16-drag-window-by-clicking-anywhere-on-macos/
 
 `defaults write -g NSWindowShouldDragOnGesture -bool true`
+
+
+### Other mac apps
+
+* brew
+* maccy ( clipboard manager) 
+* rectangle ( window arranger)
+
