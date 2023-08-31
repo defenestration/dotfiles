@@ -17,14 +17,6 @@ ln -s -f `pwd`/gitignore-global ${HOME}/.gitignore
 git config --global core.excludesfile ~/.gitignore
 ```
 
-### iterm2
-
-in iterm2 preferences -> General > Preferences
-
-☑️ load preferences from a custom folder or url -> use folder in dotfiles. 
-
-Save Changes: Save changes automaticaly
-
 ## Install WSL2
 
 In an Ubuntu 20 using WSL2  you will also want stuff to forward ssh key with keepassxc. see [here](https://code.mendhak.com/wsl2-keepassxc-ssh/)
