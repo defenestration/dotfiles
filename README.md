@@ -53,3 +53,9 @@ rm npiperelay_windows_amd64.zip
 
 echo "install fonts from https://github.com/romkatv/powerlevel10k#manual-font-installation"
 ```
+
+### Drag windows with ctrl+cmd
+
+https://mmazzarolo.com/blog/2022-04-16-drag-window-by-clicking-anywhere-on-macos/
+
+`defaults write -g NSWindowShouldDragOnGesture -bool true`
