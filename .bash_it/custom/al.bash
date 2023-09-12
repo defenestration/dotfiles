@@ -76,3 +76,6 @@ alias rdesktop='xfreerdp --plugin cliprdr -u administrator'
 alias vncviewer='vncviewer -compresslevel 5 -quality 5'
 alias digs='dig ANY +noall +answer'
 alias mtr='mtr -t'
+
+alias jess='jq -C | less'
+alias yess='yq -C | less'
