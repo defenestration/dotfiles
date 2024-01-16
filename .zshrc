@@ -156,3 +156,14 @@ if uname -r | grep -q WSL2 ; then
   fi
 fi
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#avoid multiple shells adding to history for each others sessions
+unsetopt inc_append_history
+unsetopt share_history
+
+export PATH=$PATH:/Users/a.brevick/.linkerd2/bin
+
+if [ -d $HOME/.rd/bin ]; then
+  export PATH="$PATH:$HOME/.rd/bin"
+fi
