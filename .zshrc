@@ -145,14 +145,14 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 autoload -U compinit && compinit
 
 
+export PATH="$HOME/bin:$PATH"
 if uname -r | grep -q WSL2 ; then
   export WSL=true
   export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
-  export PATH="$HOME/npiperelay:$PATH"
   ss -a | grep -q $SSH_AUTH_SOCK
   if [ $? -ne 0 ]; then
     rm -f $SSH_AUTH_SOCK
-    (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$HOME/npiperelay/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
+    (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$HOME/bin/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
   fi
 fi
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
