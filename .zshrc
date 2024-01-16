@@ -77,7 +77,7 @@ ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl docker macos)
+plugins=(git kubectl docker macos terraform fluxcd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -141,9 +141,6 @@ export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/a.brevick/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 [[ -f ~/.kubech/kubech ]] && source ~/.kubech/kubech
 autoload -U compinit && compinit
 
@@ -158,3 +155,4 @@ if uname -r | grep -q WSL2 ; then
     (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"$HOME/npiperelay/npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
   fi
 fi
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
