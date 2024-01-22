@@ -130,10 +130,6 @@ alias pip=pip3
 
 source ~/git/dotfiles/.bash_it/custom/al.bash
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 #command -v flux >/dev/null && . <(flux completion zsh) && compdef _flux flux
 export PATH="${PATH}:${HOME}/.krew/bin:${HOME}/go/bin"
 export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
@@ -167,3 +163,11 @@ export PATH=$PATH:/Users/a.brevick/.linkerd2/bin
 if [ -d $HOME/.rd/bin ]; then
   export PATH="$PATH:$HOME/.rd/bin"
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/a.brevick/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
