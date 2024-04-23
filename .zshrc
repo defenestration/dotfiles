@@ -77,7 +77,7 @@ ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl docker macos terraform fluxcd)
+plugins=(git kubectl docker macos terraform fluxcd zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +114,9 @@ export PATH="$PATH:/usr/local/sbin:/$HOME/bin"
 autoload -U +X bashcompinit && bashcompinit
 [[ -f  /usr/local/etc/bash_completion.d/az ]] && source /usr/local/etc/bash_completion.d/az
 
-complete -o nospace -C /usr/local/bin/terraform terraform
+
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+#complete -o nospace -C /usr/local/bin/terraform terraform
 
 alias y="yq eval -C"
 alias yess=" y | less"
@@ -160,14 +162,19 @@ unsetopt share_history
 
 export PATH=$PATH:/Users/a.brevick/.linkerd2/bin
 
-if [ -d $HOME/.rd/bin ]; then
-  export PATH="$PATH:$HOME/.rd/bin"
-fi
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/a.brevick/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+if [ -d $HOME/.rd/bin ]; then
+export PATH="$PATH:$HOME/.rd/bin"
+fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+#add to kubecontext in ~/.p10k.zsh conf as well
+#alias kubectl=kubecolor
+alias k=kubecolor
+# make completion work with kubecolor
+compdef kubecolor=kubectl
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

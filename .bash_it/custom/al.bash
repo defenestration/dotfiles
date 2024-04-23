@@ -9,8 +9,8 @@ ssl_domain() {
 	domain=$1
 	port=${2:-443}
 	ssl=`echo | openssl s_client -connect $domain:$port -servername $domain 2>/dev/null`
-        echo "$ssl" | openssl x509 -noout -subject -issuer -dates -fingerprint
-        echo "$ssl" | openssl x509 -text -noout |grep "X509v3 Subject Alternative Name" -A1
+        echo "$ssl" | openssl x509 -noout -subject -issuer -dates -fingerprint  -ext subjectAltName
+#        echo "$ssl" | openssl x509 -text -noout |grep "X509v3 Subject Alternative Name" -A1
 }
 #hosts check
 hosts() { 
