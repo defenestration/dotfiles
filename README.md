@@ -59,3 +59,9 @@ rm npiperelay_windows_amd64.zip
 
 echo "install fonts from https://github.com/romkatv/powerlevel10k#manual-font-installation"
 ```
+
+
+Also may need to update SSH version on windows. See:
+
+* https://superuser.com/questions/1808572/how-to-automate-starting-the-ssh-agent-and-adding-my-keys-in-wsl2-for-windows
+* https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH-Using-MSI#2-update-system-path-required-for-scp-and-sftp
