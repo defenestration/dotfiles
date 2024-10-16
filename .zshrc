@@ -178,3 +178,4 @@ alias k=kubecolor
 # make completion work with kubecolor
 compdef kubecolor=kubectl
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/share/dotnet:$PATH"
