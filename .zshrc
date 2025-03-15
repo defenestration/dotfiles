@@ -177,5 +177,5 @@ export NVM_DIR="$HOME/.nvm"
 alias k=kubecolor
 # make completion work with kubecolor
 compdef kubecolor=kubectl
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/share/dotnet:$PATH"
