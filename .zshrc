@@ -1,6 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -15,6 +16,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="fino-time"
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
@@ -77,7 +79,7 @@ ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl docker macos terraform fluxcd zsh-autosuggestions)
+plugins=(git kubectl docker macos fluxcd zsh-autosuggestions chruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -172,10 +174,14 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-#add to kubecontext in ~/.p10k.zsh conf as well
-#alias kubectl=kubecolor
-alias k=kubecolor
+#add kubecolor to 'POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND' variable in ~/.p10k.zsh as well 
+#alias k=kubecolor
+alias kubectl=kubecolor
 # make completion work with kubecolor
 compdef kubecolor=kubectl
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/share/dotnet:$PATH"
+chruby ruby-3.4.1
+export TENV_AUTO_INSTALL=true
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+#eval "$(starship init zsh)"

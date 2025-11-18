@@ -13,6 +13,6 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 "indentline plugin?
 let g:indentLine_char = '⦙'
 
-set number                     " Show current line number
-set relativenumber             " Show relative line numbers
+"set number                     " Show current line number
+"set relativenumber             " Show relative line numbers
 
