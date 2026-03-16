@@ -8,8 +8,9 @@ vms()  { virt-manager --connect=qemu+ssh://root@${1?}/system ; }
 ssl_domain() { 
      
 	domain=$1
-	port=${2:-443}
-	echo "echo | openssl s_client -connect $domain:$port -servername $domain 2>/dev/null | openssl x509 -noout -subject -issuer -dates -fingerprint  -ext subjectAltName"
+        ip=${2:-$domain}
+	port=${3:-443}
+	echo "echo | openssl s_client -connect ${ip}:$port -servername $domain 2>/dev/null | openssl x509 -noout -subject -issuer -dates -fingerprint  -ext subjectAltName"
 	ssl=`echo | openssl s_client -connect $domain:$port -servername $domain 2>/dev/null`
         echo "$ssl" | openssl x509 -noout -subject -issuer -dates -fingerprint  -ext subjectAltName
 #        echo "$ssl" | openssl x509 -text -noout |grep "X509v3 Subject Alternative Name" -A1

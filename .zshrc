@@ -72,7 +72,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/git/dotfiles/.oh-my-zsh/custom
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -185,3 +185,10 @@ chruby ruby-3.4.1
 export TENV_AUTO_INSTALL=true
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 #eval "$(starship init zsh)"
+
+
+
+
+alias qwerty='echo asdf'
+
+alias curlr='curl --resolve "$host:80:$ip" --resolve "$host:443:$ip"'
