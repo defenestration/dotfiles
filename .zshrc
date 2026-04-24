@@ -192,3 +192,9 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 alias qwerty='echo asdf'
 
 alias curlr='curl --resolve "$host:80:$ip" --resolve "$host:443:$ip"'
+
+
+
+# opencode-common — shared OpenCode configuration (dev mode)
+export OPENCODE_CONFIG_DIR="/Users/a.brevick/git/opencode-common/.opencode"
+export OPENCODE_CONFIG="/Users/a.brevick/git/opencode-common/opencode.json"

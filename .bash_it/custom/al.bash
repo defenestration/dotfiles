@@ -1,6 +1,7 @@
 #!/bin/bash
 passgen() {
-	< /dev/urandom tr -dc '_A-Z-a-z-0-9!@#$%^&*()[];:,.<>/?|~' | head -c16
+  #LC_CTYPE=C tr -cd '[:graph:]' < /dev/urandom | head -c ${1:-16}
+  LC_ALL=C tr -dc 'A-Za-z0-9!?%=' < /dev/urandom | head -c ${1:-16}
 }
 sshs() { ssh -t $* screen -d -R abrev ; }
 into() { google-chrome http://intodns.com/"$1" ; }
@@ -81,3 +82,8 @@ alias mtr='mtr -t'
 
 alias jess='jq -C | less'
 alias yess='yq -C | less'
+
+alias curlr='curl --resolve "$host:80:$ip" --resolve "$host:443:$ip"'
+alias ke='KUBE_EDITOR='\''code --wait'\'' kubectl edit'
+
+alias curls='curl -w "%{http_code}\n"'
